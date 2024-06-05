@@ -1,0 +1,20 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.PlantCuidadoVerdeApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/Primary</item>
+        <item name="colorPrimaryVariant">@color/PrimaryVariant</item>
+        <item name="colorSecondary">@color/Secondary</item>
+        <item name="colorSecondaryVariant">@color/SecondaryVariant</item>
+        <item name="colorOnError">@color/OnError</item>
+        <item name="colorOnBackground">@color/OnBackground</item>
+        <item name="background">@color/Background</item>
+        <item name="colorError">@color/Error</item>
+        <item name="colorOnSurface">@color/onSurface</item>
+        <item name="colorOnSurfaceVariant">@color/onSurfaceVariant</item>
+        <item name="colorSurface">@color/Surface</item>
+        <item name="colorOnPrimary">@color/OnPrimary</item>
+        <item name="colorOnSecondary">@color/OnSecondary</item>
+    </style>
+
+    <style name="Theme.PlantCuidadoVerdeApp" parent="Base.Theme.PlantCuidadoVerdeApp" />
+</resources>

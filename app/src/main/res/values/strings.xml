@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">PlantCuidadoVerdeApp</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="imv_planta">tipos de plantas </string>
+    <string name="tv_nombre">nombre de la planta </string>
+    <string name="tv_tipo">tipo de planta </string>
+    <string name="tv_descripcion">descripcion de la planta </string>
+    <string name="imageView_plant">planta seleccionada </string>
+    <string name="plant_name">nombre</string>
+    <string name="plant_tipo">tipo</string>
+
+
+</resources>
