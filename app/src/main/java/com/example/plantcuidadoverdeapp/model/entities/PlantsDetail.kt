@@ -7,5 +7,4 @@ data class PlantsDetail (
     val imagen: String,
     val descripcion: String
 
-
 )

@@ -11,29 +11,18 @@ import com.example.plantcuidadoverdeapp.model.entities.DetallesPlantas
 import com.example.plantcuidadoverdeapp.model.repository.PlantsRepository
 import kotlinx.coroutines.launch
 
-class PlantsViewModel (application: Application): AndroidViewModel(application) {
-    //conexion repository
-    private val repository: PlantsRepository
+class PlantsViewModel(application: Application, private val repository: PlantsRepository ): AndroidViewModel(application) {
 
 
-    /// MutableLiveData para detalles de planta
-   val plantDetailLiveData = MutableLiveData<DetallesPlantas>()
-
-    /* private val plantDetailLiveData = MutableLiveData<DetallesPlantas>()
+    private val _plantDetailLiveData = MutableLiveData<DetallesPlantas>()
     val plantDetailLiveData: LiveData<DetallesPlantas>
-        get() = _plantDetailLiveData*/
+        get() = _plantDetailLiveData
 
     // para seleccionar
     private var idSelected: Int = 0
 
 
     init {
-        //conexion a la base de datos y repository
-        val db = PlantsDataBase.getDataBase(application)
-        val plantsDao = db.getPlantsDao()
-
-        repository = PlantsRepository(plantsDao)
-
         viewModelScope.launch {
             repository.fetchPlantList()
         }
@@ -47,8 +36,9 @@ class PlantsViewModel (application: Application): AndroidViewModel(application) 
 
     fun getPlantDetailByIdFromInternet(id:Int) = viewModelScope.launch {
        idSelected = id
-        repository.fetchPlantDetail(id)
-        //_plantDetailLiveData.postValue(repository.fetchPlantDetail(id))
+        viewModelScope.launch {
+      _plantDetailLiveData.postValue(repository.fetchPlantDetail(id))
 
     }
+  }
 }

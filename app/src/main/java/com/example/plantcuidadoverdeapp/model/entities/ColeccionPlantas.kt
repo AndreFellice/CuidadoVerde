@@ -14,7 +14,4 @@ data class ColeccionPlantas (
     val imagen: String,
     val descripcion: String,
 
-
-
-
     )

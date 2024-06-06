@@ -11,7 +11,7 @@ import com.example.plantcuidadoverdeapp.model.fromInternetDetallesPlantas
 
 class PlantsRepository (private val plantsDao: PlantsDao){
     // retrofit Cliente
-    private val networkService = RetrofitPlant.retrofitInstance()
+    private val networkService = RetrofitPlant.getRetrofitInstance()
     // LiveData para la lista de plantas
     val plantListLiveData: LiveData<List<ColeccionPlantas>> = plantsDao.getAllPlants()
 

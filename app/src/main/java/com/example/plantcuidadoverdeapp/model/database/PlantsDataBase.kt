@@ -8,8 +8,7 @@ import com.example.plantcuidadoverdeapp.model.entities.ColeccionPlantas
 import com.example.plantcuidadoverdeapp.model.entities.DetallesPlantas
 import com.example.plantcuidadoverdeapp.model.dao.PlantsDao
 
-@Database(entities = [ColeccionPlantas:: class, DetallesPlantas::class], version = 1,
-    exportSchema = false)
+@Database(entities = [ColeccionPlantas::class, DetallesPlantas::class], version = 1,exportSchema = false)
 abstract class PlantsDataBase : RoomDatabase() {
 
     // referencia del dao

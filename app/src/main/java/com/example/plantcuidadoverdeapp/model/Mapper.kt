@@ -16,13 +16,8 @@ fun fromInternetColeccionPlantas( plantsList: List<Plants>) :List<ColeccionPlant
             descripcion = it.descripcion
 
         )
-
     }
-
-
 }
-
-
 fun fromInternetDetallesPlantas( plants: PlantsDetail) :DetallesPlantas{
 
     return DetallesPlantas(
@@ -33,5 +28,4 @@ fun fromInternetDetallesPlantas( plants: PlantsDetail) :DetallesPlantas{
         descripcion = plants.descripcion
 
     )
-
 }

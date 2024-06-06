@@ -21,7 +21,6 @@ class FirstFragment : Fragment() {
     private lateinit var  binding: FragmentFirstBinding
     private val viewModel: PlantsViewModel by activityViewModels()
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -29,7 +28,6 @@ class FirstFragment : Fragment() {
 
         binding = FragmentFirstBinding.inflate(inflater, container, false)
         return binding.root
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -58,9 +56,5 @@ class FirstFragment : Fragment() {
             }
             findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment,bundle)
         })
-
-
     }
-
-
 }
